@@ -2,7 +2,7 @@ package java0.conc0301;
 
 public class DaemonThread {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Runnable task = new Runnable() {
             @Override
             public void run() {
@@ -19,6 +19,7 @@ public class DaemonThread {
         thread.setName("test-thread-1");
         thread.setDaemon(true);
         thread.start();
+        Thread.currentThread().sleep(6000);
     }
     
     

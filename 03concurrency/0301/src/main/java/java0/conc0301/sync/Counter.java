@@ -3,7 +3,7 @@ package java0.conc0301.sync;
 public class Counter {
     private int sum = 0;
     public void incr() {
-        sum++;
+        synchronized(this) {sum++;}
     }
     public int getSum() {
         return sum;
